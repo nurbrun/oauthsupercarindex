@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @supercar.name %>
+</p>
+
+<p>
+  <strong>City:</strong>
+  <%= @supercar.city %>
+</p>
+
+<%= link_to 'Edit', edit_supercar_path(@supercar) %> |
+<%= link_to 'Back', supercars_path %>

@@ -1,0 +1,27 @@
+<h1>Listing supercars</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>City</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @supercars.each do |supercar| %>
+      <tr>
+        <td><%= supercar.name %></td>
+        <td><%= supercar.city %></td>
+        <td><%= link_to 'Show', supercar %></td>
+        <td><%= link_to 'Edit', edit_supercar_path(supercar) %></td>
+        <td><%= link_to 'Destroy', supercar, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Supercar', new_supercar_path %>
